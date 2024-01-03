@@ -1,0 +1,22 @@
+
+
+.carousel-item {
+  position: relative;
+  width: 100%;  /* Takes the full width of #carouselExample */
+  height: 0;
+  padding-top: 40%;  /* 1:2 aspect ratio */
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  #achievementCarousel .carousel-caption {
+      max-width: 90%; /* Increase width of the caption on smaller screens */
+      margin-top: 5%; /* Adjusted for better visibility on smaller screens */
+  }
+
+  #achievementCarousel .carousel-control-prev,
+  #achievementCarousel .carousel-control-next {
+      width: 10%;
+  }
+}
