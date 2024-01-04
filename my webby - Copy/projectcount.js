@@ -50,3 +50,20 @@ function switchProject(projectNumber) {
 
 // Switch to Project 1 by default
 switchProject(1);
+
+
+
+$(document).ready(function() {
+  // Assuming your .container element is the swipe target
+  $('.container').swipe({
+    swipeLeft: function(event, direction, distance, duration, fingerCount) {
+      // Trigger next project
+      switchProject(currentProject + 1);
+    },
+    swipeRight: function(event, direction, distance, duration, fingerCount) {
+      // Trigger previous project
+      switchProject(currentProject - 1);
+    },
+    threshold: 0
+  });
+});

@@ -25,10 +25,18 @@
   overflow-x: hidden;
   overflow-y: hidden; 
   font-size: 18px;
-  background-image: url('resources/oilpaint.png');
-    background-repeat: no-repeat;
-    background-size: cover; /* this will cover the entire viewport */
-    background-position: center center; /* this will center the image */
+  background-image: url('resources/waterhorlightning.png'); /* Default background image */
+  background-repeat: no-repeat;
+  background-size: auto; /* Stretch the image to cover the entire element */
+  background-position: center center; /* Center the image */
+}
+
+/* Media query for phones (screens smaller than 768px) */
+@media (max-width: 800px) {
+  #mainbody {
+    background-image: url('resources/watervertlightning.png'); /* Replace with your vertical image path */
+    background-size: auto; /* Stretch the image to cover the entire element */
+  }
 }
 
 

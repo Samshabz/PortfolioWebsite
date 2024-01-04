@@ -1,0 +1,19 @@
+
+.container {
+    max-width: 800px; /* Set the max-width as desired */
+    margin: 0 auto; /* This will center your container */
+    padding: 0 15px; /* Add some padding on the sides */
+  }
+  
+  .content {
+    text-align: center; /* Center text within the content div */
+  }
+  
+
+  .content p {
+    text-align: left; /* Align text left within each h3 and p element */
+    max-width: 100%; /* Ensure text doesn't exceed the width of its container */
+    margin-left: auto; /* Center block-level elements by setting left and right margin to auto */
+    margin-right: auto;
+  }
+  

@@ -1,15 +1,22 @@
 $(document).ready(function() {
-    // Initialize swipe for achievements carousel
-    initializeSwipe('#achievementCarousel');
-});
+  // Initialize the carousel
+  $('#achievementCarousel').carousel({
+      // Carousel options (if any)
+  });
 
-function initializeSwipe(carouselId) {
-    $(carouselId).swipe({
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-            if (direction == 'left') $(this).carousel('next');
-            if (direction == 'right') $(this).carousel('prev');
-        },
-       // allowPageScroll: "vertical"
-    });
-}
-    
+  // Initialize TouchSwipe for the carousel
+  $('#achievementCarousel').swipe({
+      swipeLeft: function(event, direction, distance, duration, fingerCount) {
+          $(this).carousel('next');
+      },
+      swipeRight: function(event, direction, distance, duration, fingerCount) {
+          $(this).carousel('prev');
+      },
+      threshold: 0
+  });
+
+  // Optional: Carousel slide change event
+  $('#achievementCarousel').on('slide.bs.carousel', function () {
+      console.log('Carousel slide changed');
+  });
+});

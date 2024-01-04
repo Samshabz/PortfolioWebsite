@@ -8,7 +8,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-size: 18px;
+ 
   color: #fff;
   text-align: center;
   
@@ -21,20 +21,19 @@ nav ul li.active a {
   background-color: #ffffff;  /* Change as per your design */
   color: #000000;
   border-radius: 4px;  /* Optional: for rounded corners */
-  padding: 5px 10px;  /* Optional: for some spacing */
+  /* Optional: for some spacing */
 }
 
 header {
-  display:flex;
+  display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center; /* Changed from space-between to center */
   background: rgba(20, 23, 28, 1);
   padding: 20px;
   position: fixed;
   width: 100%;
   z-index: 1;
 }
-
 
 nav ul {
   list-style-type: none !important;
@@ -61,13 +60,12 @@ nav ul li a:hover {
   color: #000; 
    border-radius: 4px;
    text-decoration: none;
-   padding: 5px 10px; 
 }
 
 .container {
   max-width: 100%;
   padding: 0 20px;
-  color: #ff6d6d;
+  color: #abedff;
   /* MAIN HEADING COLOR */
 }
 
@@ -75,7 +73,7 @@ nav ul li a:hover {
 body {
   position: relative;
   
-  background: radial-gradient(#653a3a, #291a1a);
+  background: radial-gradient(#200134, #0f0049);
   /*BACK COLOR MAIN*/
  
 }

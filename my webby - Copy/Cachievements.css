@@ -1,22 +1,80 @@
-
-
 .carousel-item {
+  background-color: transparent;
+  text-align: center;
+  display: none;
+  padding: 20px 110px; 
+}
+
+.carousel-item h3 {
+  color: #abedff;
+}
+
+.container p{
+  color: #ffffff;
+}
+
+.static-text {
+  text-align: center; /* Center the text */
+  color: #ffffff;
+  font-size: 16px;
   position: relative;
-  width: 100%;  /* Takes the full width of #carouselExample */
-  height: 0;
-  padding-top: 40%;  /* 1:2 aspect ratio */
-  overflow: hidden;
+  z-index: 32030;
+  padding: 10px; /* Add some padding around the text */
+  /* Add any other styles you want, like background color, margins, etc. */
+}
+
+.static-text em {
+  font-style: italic;
+  /* Add any other styles for the italic text */
+}
+
+
+/* Center the content of .carousel-item vertically and horizontally */
+.carousel-inner .carousel-item {
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 10px); /* This height needs to be adjusted based on your navbar and any other fixed elements */
+}
+
+
+
+/* Absolute positioning for arrows within the .carousel-inner */
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* Responsive adjustments */
-@media (max-width: 767px) {
+@media (max-width: 967px) {
   #achievementCarousel .carousel-caption {
-      max-width: 90%; /* Increase width of the caption on smaller screens */
-      margin-top: 5%; /* Adjusted for better visibility on smaller screens */
+    max-width: 1%;
+    margin-top: 5%;
+
+    .carousel-item {
+      padding: 0% 0%;
+    }
+    body{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    font-size: xx-small;
+    }
   }
 
   #achievementCarousel .carousel-control-prev,
   #achievementCarousel .carousel-control-next {
-      width: 10%;
+    width: 10%;
   }
+}
+
+
+.carousel-item.active {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
