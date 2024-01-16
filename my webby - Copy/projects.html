@@ -21,8 +21,14 @@
   
 </head>
 <body>
+  <div class="contenta "> 
   <header>
     <nav>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -52,22 +58,43 @@
       <div id="project1" class="project">
         <div class="projtext">  
           <h3>E-design 314 Light System</h3>
-          <p>In my third-year, first semester, E-Design module, I underwent a self-guided journey of designing an electronic device, blending disciplines such as circuit design, hardware implementation, and an expansive software component. Rigorous testing phases, assessments, and technical reports sharpened my problem-solving, design, and programming skills.<br><br>
-            The device, controlled via UART protocol, push buttons, an analog slider, and a multi-gesture trackpad, calibrated data to configure specific outputs. Outputs included an adjustable intensity high-powered white LED with flashlight, strobe, and morse code modes, and an adjustable RGB LED.<br><br>
-            Further information on the hardware and software schematics, attached below, is detailed in the report. The project, for which I achieved an 85% score, provided invaluable exposure to practical problem-solving, circuitry design, efficient algorithm development, and effective software debugging practices, significantly enhancing my electronics knowledge and coding skills.</p>
+          <p>
+            In my third year's opening semester, I tackled the demanding E-Design 314 project, aiming to develop a multi-mode light system with control through analog inputs and serial communication. While the project did involve circuitry, it primarily focused on developing software and understanding technical documentation, bridging the gap between low-level hardware manipulation and high-level software development.
+            <br><br>
+            Modular coding was vital for maintaining the system's flexibility, facilitating updates, and streamlining troubleshooting. Overcoming complex and peculiar bugs amid processor constraints was a significant challenge, reinforcing the value of best coding practices, the clarity that comes with a fresh mind, and the necessity of hardware consideration in programming.
+            <br><br>
+            The project culminated in a multi-functional light system that was assessed through automated demonstrations and evaluation of our technical reports.  Achieving 85%, this project enriched my skills software and hardware while improving my problem-solving and design skills. 
+          </p>
         </div>
 
 
         <div id="carouselProject1" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
               <div class="carousel-item active">
-                  <img src="./resources/softdes.svg" class="d-block" alt="...">
+               
+                <div class="image-container">
+                  <img src="./resources/softdes.svg" alt="Image 1" onclick="openFullscreen('fullscreen1')">
+                </div>
+                
+              
+
+            
               </div>
               <div class="carousel-item">
-                  <img src="./resources/harddes.svg" class="d-block" alt="...">
+
+
+                <div class="image-container">
+                  <img src="./resources/harddes.svg" alt="Image 2" onclick="openFullscreen('fullscreen2')">
+                </div>
+                
               </div>
               <div class="carousel-item">
-                  <img src="./resources/edes.jpg" class="d-block" id="rot90">
+
+
+                <div class="image-container">
+                  <img src="./resources/edes.jpg" alt="Image 3" id="rot90" onclick="openFullscreen('fullscreen3')">
+                </div>
+                
               </div>
           </div>
           <a class="carousel-control-prev" href="#carouselProject1" role="button" data-slide="prev">
@@ -79,13 +106,14 @@
               <span class="sr-only">Next</span>
           </a>
       </div>
-      
-      
-
       <div class="containerlink">     
         <a href="https://github.com/Samshabz/E-Design-314-Project.git" target="_blank" class="proj1links">Code (Github)</a>
         <a href="resources/E design FINAL.pdf" target="_blank" class="proj1links">Report</a>
       </div>
+
+    </div>
+
+
 
 
 
@@ -101,10 +129,15 @@
         <div class="projtext">
         <h3>Hobby Electronic Projects</h3>  
         <p>
-          Engaging in electronics projects has become my hobby, utilizing Arduino and STM32 microcontrollers. Notable projects include a model parking sensor with a buzzer and ultrasonic sensor, as well as an temperature dependent auto-switching motor controlling an angular switch heater switch. 
+          In leisure time I enjoy delving into electronic projects, employing Arduino and STM32 microcontrollers to bring ideas to life. Projects of note include a model parking sensor using a buzzer and ultrasonic sensor, and a temperature-dependent motor controller operating an angular heater switch.
           <br>
-          A major undertaking involved addressable RGB LED strips. I crafted diverse patterns, including a cozy fireplace effect, on a 6-meter strip. Moreover, I developed a button-controlled ping pong game, where players timed presses to return the ball on the dynamic LED strip. Addressing limited component access, I repurposed old USB cables for power transmission at 5V, reaching for about 1/4 of the maximum sink of 21.6A. I connected the cables in parallel with diodes to prevent differential voltage reverse emf
-          Serial power injection tackled bus resistance, upholding consistent voltage levels. With proper wire sizing and soldering, I prevented any current bottleneck. My focus centered on surpassing component limitations, optimizing brightness, and ensuring seamless operation in LED strip projects. This task was successful however in future I would like to add more current, for higher brightness, and control thermal issues with a metal rail which also allows for discrete wiring. A filter should also be placed in front for even light dispersion across the strip.  
+          A major undertaking involved addressable RGB LED strips. I crafted diverse patterns, including a cozy fireplace effect, on a 6-meter strip. Moreover, I developed a button-controlled ping pong game, where players timed presses to return the ball on the dynamic LED strip. 
+          <br>
+          The LEDs had a large current requirement, and to save costs I connected multiple USB ports together with diode protection into sufficient wire sizing. Serial power injection tackled bus resistance, upholding consistent voltage levels. This ensured optimal brightness and prevented line color loss. 
+          <br>
+          Next, I made the strip Wifi controllable. I created an aesthetic local web server on the ESP32 microcontroller, allowing for control of the LEDs through a web browser.
+          <br>
+          Further improvements could be using a sophisticated switching power supply for more consistent voltage and current and a metal rail for aesthetics and thermal regulation. A dispersion filter would further improve the aesthetics. 
         </p>
          
         </div>
@@ -139,9 +172,9 @@
 
       <div id="project3" class="project hidden">
         <div class="projtext">
-        <h3>Graphic Design</h3>  
-        <p>Amongst my hobbies, is audio & visual editing and design. This involved learning online through youtube courses and practicing on my own and with projects for friends. </p>
-        <p>  In the realm of photo editing, I edited landscapes photos that I captured myself, and made them more lively to convey certain feelings. I created songs and mixes thereof in the audio department. In the audio-visual department I created a short hype clip featuring my friends. Finally, in the graphic design I designed numerous patches, clothing designs, advertisements for friends' businesses, and the logo visible on the home page.  </p>
+        <h3>Audio-visual Design</h3>  
+        <p>Audio-visual design and editing are amongst my hobbies. This involved self-teaching through youtube courses and practicing on my own and with projects for friends. </p>
+        <p> I have done work in photo-editing and photography, and music mixing. I also worked on a video editing project featuring friends. I designed graphics including residence patches which were very successful, clothing designs, promotions for friends, and logos  </p>
         </div>
         <!--  
         <div id="carouselProject3" class="carousel slide" data-ride="carousel">
@@ -212,9 +245,24 @@
         <div class="projtext">
         <h3>E-design 344 Health Monitor</h3>  
         <p>
-          This project was done as per requirements for our third year second semester e-design module. This module was focused on an analogue design of a health monitoring system. The system involved a pedometer, weight sensor, heart rate sensor, and temperature sensor. These components were all bare-boned analogue components and required conditioning to the signals to improve signal-to-noise ratio, improve clarity, and alter waveforms. The system was designed to be low-powered. Some software design was made to ensure readable user output. The central processor controlled output to the OLED screen and wireless communication via Wifi to a user server. 
+          Our third year, second-semester E-design project saw us creating a predimonantly analog health-monitoring system. This involved a pedometer, weight sensor, heart rate sensor, and temperature sensor and output through a microcontroller and screen. These simple analog components required us to read through datasheets, understanding governing theory of the devices, consider project specifications, and create unique circuit designs. These circuits would intepret the signals in a logical way and condition the signal-to-noise ratio. The project involved reading up on theory, creating a design, simulating that design, and finally implementing it. When designing we had to consider the hardware limitations and ensure that the circuit would be robust to noise. The circuit also had to be calibrated for tolerances. Overall, I learnt valuable skills and received x%. 
+
         </p>
         </div>
+
+ 
+       
+        <div class="image-container">
+          <img src="./resources/newempty.png" alt="Image 2" id="edes2" onclick="openFullscreen('fullscreen4')">
+        </div>
+
+
+
+
+        <div class="containerlink">     
+          <a href="resources/EDES2.pdf" target="_blank" id="bottomrep" class="proj1links">Report</a>
+        </div>
+  
 
            <!--
         <div id="carouselProject5" class="carousel slide" data-ride="carousel">
@@ -280,7 +328,19 @@
 
  
       
-
+  <div id="fullscreen1" class="fullscreen" onclick="closeFullscreen('fullscreen1')">
+    <img src="./resources/softdes.svg" alt="Fullscreen Image 1">
+  </div>
+  <div id="fullscreen2" class="fullscreen" onclick="closeFullscreen('fullscreen2')">
+    <img src="./resources/harddes.svg" alt="Fullscreen Image 2">
+  </div>
+  <div id="fullscreen3" class="fullscreen" onclick="closeFullscreen('fullscreen3')">
+    <img src="./resources/edes.jpg" alt="Fullscreen Image 3" id="rot90">
+  </div>
+  <div id="fullscreen4" class="fullscreen" onclick="closeFullscreen('fullscreen4')">
+    <img src="./resources/whiteversion.png" alt="Fullscreen Image 4">
+  </div>
+    
 
 
 
@@ -288,31 +348,11 @@
     <!--<p>© 2023 My Portfolio. All rights reserved.</p>*/-->
   </footer>
   
-  <script>
-$(document).ready(function() {
-    initializeSwipe('#carouselProject1');
-    initializeSwipe('#carouselProject2');
-    initializeSwipe('#carouselProject3');
-    initializeSwipe('#carouselProject4');
-    initializeSwipe('#carouselProject5');
-    // ... add more initializeSwipe calls for additional project carousels
-});
 
-function initializeSwipe(carouselId) {
-    $(carouselId).swipe({
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-            if (direction == 'left') $(this).carousel('next');
-            if (direction == 'right') $(this).carousel('prev');
-        },
-        allowPageScroll: "vertical"
-    });
-}
-  </script>
-  
 
   <script src="projectcount.js"></script>
 </body>
-
+</div>
 
 
 </html>

@@ -16,6 +16,9 @@ function switchProject(projectNumber) {
   }
 
 
+  
+
+
 
   // Update the current project number
   currentProject = projectNumber;
@@ -29,8 +32,21 @@ function switchProject(projectNumber) {
   // Hide all projects
   var projects = document.getElementsByClassName("project");
   for (var j = 0; j < projects.length; j++) {
-    projects[j].classList.add("hidden");
+    projects[j].style.opacity = '0';
+    setTimeout(function(project) {
+      project.classList.add("hidden");
+    }, 500, projects[j]); // Delay hiding until after the transition
   }
+
+  setTimeout(function() {
+    // Show the selected project
+    var selectedProject = document.getElementById("project" + currentProject);
+    selectedProject.classList.remove("hidden");
+    // Force reflow/repaint to ensure the transition starts
+    void selectedProject.offsetWidth;
+    selectedProject.style.opacity = '1';
+  }, 500); // This matches the duration of the opacity transition
+
 
   // Show the selected project
   var selectedProject = document.getElementById("project" + projectNumber);
@@ -64,6 +80,51 @@ $(document).ready(function() {
       // Trigger previous project
       switchProject(currentProject - 1);
     },
-    threshold: 0
+    threshold: 85
   });
+});
+
+
+$(document).ready(function() {
+  initializeSwipe('#carouselProject1');
+  initializeSwipe('#carouselProject2');
+  initializeSwipe('#carouselProject3');
+  initializeSwipe('#carouselProject4');
+  initializeSwipe('#carouselProject5');
+  // ... add more initializeSwipe calls for additional project carousels
+});
+
+function initializeSwipe(carouselId) {
+  $(carouselId).swipe({
+      swipeStart: function(event, direction, distance, duration, fingerCount) {
+          isSwiping = true; // Set flag on swipe start
+      },
+      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+          event.stopPropagation(); // Stop event bubbling
+          if (direction == 'left') $(this).carousel('next');
+          if (direction == 'right') $(this).carousel('prev');
+      },
+      swipeEnd: function(event, direction, distance, duration, fingerCount) {
+          isSwiping = false; // Reset flag on swipe end
+      },
+      allowPageScroll: "vertical",
+      threshold: 5
+  });
+}
+
+
+function openFullscreen(fullscreenId) {
+  document.getElementById(fullscreenId).style.display = 'flex';
+  document.body.classList.add('no-scroll');
+  document.querySelector('.contenta').classList.add('blur-background');
+}
+
+function closeFullscreen(fullscreenId) {
+  document.getElementById(fullscreenId).style.display = 'none';
+  document.body.classList.remove('no-scroll');
+  document.querySelector('.contenta').classList.remove('blur-background');
+}
+
+document.querySelectorAll('.project').forEach(function(project) {
+  project.addEventListener('click', handleTap);
 });

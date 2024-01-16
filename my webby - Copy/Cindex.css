@@ -25,18 +25,39 @@
   overflow-x: hidden;
   overflow-y: hidden; 
   font-size: 18px;
-  background-image: url('resources/waterhorlightning.png'); /* Default background image */
+  background-image: url('resources/tester1.png'); /* Default background image */
   background-repeat: no-repeat;
-  background-size: auto; /* Stretch the image to cover the entire element */
+  
   background-position: center center; /* Center the image */
+  background-size: 100vw 100vh; /* viewport width and height */
+  background-attachment: fixed; 
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 /* Media query for phones (screens smaller than 768px) */
 @media (max-width: 800px) {
   #mainbody {
-    background-image: url('resources/watervertlightning.png'); /* Replace with your vertical image path */
-    background-size: auto; /* Stretch the image to cover the entire element */
+    /* background-color: #a9b8ff; */
+    background-image: url('resources/tester2.png'); 
+    font-size: 22px;
+    align-items: center;
+    justify-content: center;
+
   }
+  #particles-js {
+    display: none;
+}
+
+
+.indexfooter p {
+  color: #000000; /* Increase specificity */
+}
+
 }
 
 
@@ -73,13 +94,21 @@
     
   }
   
-  #mainfoot p{
+  #mainfoot{
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
   
   }
   
+
+  .homepage-content {
+    color: #fff;
+  }
+
+  #mainfoot {
+    font-size: 16px;
+  }
 
 
 
