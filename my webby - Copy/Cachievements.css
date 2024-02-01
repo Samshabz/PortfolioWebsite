@@ -1,3 +1,10 @@
+
+
+
+
+
+/* Path: Cachievements.css */
+
 .carousel-item {
   background-color: transparent;
   text-align: center;
@@ -6,16 +13,14 @@
 }
 
 .carousel-item h3 {
-  color: #abedff;
+  /* color: #abedff; */
 }
 
-.container p{
-  color: #ffffff;
-}
+
 
 .static-text {
   text-align: center; /* Center the text */
-  color: #ffffff;
+
   font-size: 16px;
   position: relative;
   z-index: -1;

@@ -1,5 +1,18 @@
 
 
+/* :root {
+  --para-color: #000; 
+  --h3-color: #0072B1;
+  --back-color: #d2aa72;
+} */
+
+:root {
+  --h3-color: #7492b6; /* Main color for headings */
+  --back-color: #24385b; /* Background color */
+  --para-color: #bdc3c7; /* Default text color */
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
@@ -29,7 +42,7 @@ header {
   align-items: center;
   justify-content: center; /* Changed from space-between to center */
   background: rgba(20, 23, 28, 1);
-  padding: 20px;
+ 
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -65,26 +78,42 @@ nav ul li a:hover {
 .container {
   max-width: 100%;
   padding: 0 20px;
-  color: rgb(255, 255, 255)
-  /* MAIN HEADING COLOR */
+}
+
+h3 {
+
+  color:var(--h3-color);
+  
+  /* MAIN HEADING h3 COLOR */
 }
 
 
 body {
   position: relative;
-  
-  background: #d2aa72; /*d2aa72*/
+  background: var(--back-color);
   
   /*MAIN BACKGROUND COL*/
  
 }
 
+
 .content p {
   font-size: 1em;
-  /*color: #777;*/
-  color: #ffffff;
   /* MAIN PARAGRAPH COLOR */
+  color: var(--para-color);
   margin-bottom: 30px;
+}
+
+
+em{
+
+  color: var(--para-color);
+
+}
+p {
+  color: var(--para-color);
+  /* MAIN PARAGRAPH COLOR */
+
 }
 
 
@@ -140,7 +169,7 @@ footer p {
   .hamburger-menu {
       display: block;
       position: absolute;
-      top: 5px; /* Adjust as necessary */
+      top: 7px; /* Adjust as necessary */
       right: 20px; /* Adjust as necessary */
       z-index: 20; /* Above other content */
       padding-right: 40px;
@@ -152,7 +181,7 @@ footer p {
       align-items: center; /* Center align the links */
       width: 100%; /* Full width */
       position: fixed; /* Fixed position on the top */
-      top: 60px; /* Below the hamburger menu */
+      top: 9%; /* Below the hamburger menu */
       left: 0;
       right: 0;
       background-color: rgba(20, 23, 28, 0.95); /* Semi-transparent background */
@@ -163,7 +192,7 @@ footer p {
   }
 
   nav ul li {
-      padding: 10px 0; /* Add padding to each link */
+      padding: 0px 0; /* Add padding to each link */
   }
 
   nav ul li a {
@@ -178,3 +207,93 @@ footer p {
   }
 }
 
+
+/* Carousel Styling */
+
+
+
+
+/* Set a fixed height for the navbar */
+nav {
+  height: 10vh; /* Adjust the height as needed */
+  width: 100%;
+}
+
+/* Center the content vertically within the navbar */
+nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center; /* This will vertically center the ul if the nav is taller */
+  justify-content: flex-start; /* Align items to the start of the nav */
+  padding-left: 2vw; /* Add some padding inside the nav */
+  list-style: none;
+  margin: 0;
+  
+}
+
+/* Adjust list items and links */
+nav ul li {
+  margin-right: 2vw; /* Spacing between nav items */
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 1vh 2vw; /* Vertical padding relative to viewport height */
+  font-size: 1.2vw; /* Adjust font size */
+  text-decoration: none;
+  
+}
+
+/* Ensure that the .hamburger-menu is also vertically centered */
+.hamburger-menu {
+  height: 10vh; /* Same as the navbar height */
+
+  align-items: center;
+  /* Additional styles for the hamburger menu */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav ul {
+      justify-content: center; /* Center the items on small screens */
+      padding-left: 0; /* Remove padding on small screens */
+  }
+
+  nav ul li a {
+      font-size: 16px; /* Larger font size for readability on small screens */
+      padding: 2vw; /* Larger padding for easier touch */
+  }
+
+  .hamburger-menu {
+      display: block;
+  }
+
+  nav ul {
+      display: none;
+  }
+
+  nav ul li {
+      display: block; /* Stack the list items */
+      margin-right: 0; /* Remove right margin for stacked items */
+  }
+}
+
+/* For larger screens, you might want to cap the maximum size */
+@media (min-width: 1200px) {
+  nav ul li a {
+      font-size: 14px; /* Fixed font size for large screens */
+      padding: 10px 20px; /* Fixed padding for large screens */
+  }
+}
+
+
+
+
+/* CSS to highlight the active link */
+nav ul li a.active {
+  background-color: #ffffff;
+  color: black;
+  border-radius: 4px;
+  text-decoration: none;
+  /* Add any other styles you want for the active link */
+}

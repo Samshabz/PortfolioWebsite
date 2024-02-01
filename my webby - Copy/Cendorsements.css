@@ -1,0 +1,141 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+
+.endorsement-container {
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.endorsement-container img{
+  z-index: 2;
+}
+.endorsement-container h3{
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 2em;
+  margin-bottom: 0px;
+}
+
+.endorsement {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #000000;
+
+  cursor: pointer;
+  border: none;
+  transition: color 0.475s, background-color 0.475s;
+}
+
+
+.endorsement:hover {
+  color: black; /* Text color changes to black on hover */
+}
+
+
+.endorsement:hover::before {
+  transform: scaleX(1);
+  
+}
+
+.endorsement::before {
+ 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgb(188, 188, 188) 10.8%,
+    rgb(255, 255, 255) 94.3%
+  );  
+  transition: transform 0.475s;
+  z-index: 0;
+}
+
+.company-logo {
+  margin-right: 0.5rem;
+  width: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
+.endorsement-text {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+.endorsement .new-tab-icon {
+  display: block; /* Show the icon on hover */
+}
+
+.new-tab-icon {
+  display: none; /* Hide the icon by default */
+  width: 24px; /* Example size, adjust as needed */
+  height: 24px; /* Example size, adjust as needed */
+  transition: opacity 0.3s; /* Smooth transition for the icon appearance */
+}
+
+
+
+.endorsement {
+  justify-content: space-between;
+
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  /*justify-content: flex-start;/*  Align items to start (left) */
+  gap: 20px; /* Space between logo and text */
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.button:hover {
+  color:black;
+}
+
+.company-logo {
+  max-width: 50px; /* Adjust as needed */
+  display: block; /* Ensure the logo is a block-level element */
+}
+
+.endorsement-text {
+
+  font-size: 20px; /* Adjust as needed */
+  flex-grow: 1; /* Makes text take up the remaining space */
+  text-align: left; /* Align text to the left */
+}
+
+h1 {
+  /* color: #333; */
+}
+
+@media screen and (max-width: 600px) {
+  .endorsement-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .company-logo {
+    max-width: 80px; /* Adjust for smaller screens */
+  }
+}
+
+
+

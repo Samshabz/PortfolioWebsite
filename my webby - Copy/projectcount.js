@@ -35,7 +35,7 @@ function switchProject(projectNumber) {
     projects[j].style.opacity = '0';
     setTimeout(function(project) {
       project.classList.add("hidden");
-    }, 500, projects[j]); // Delay hiding until after the transition
+    }, 0, projects[j]); // Delay hiding until after the transition
   }
 
   setTimeout(function() {
@@ -45,7 +45,7 @@ function switchProject(projectNumber) {
     // Force reflow/repaint to ensure the transition starts
     void selectedProject.offsetWidth;
     selectedProject.style.opacity = '1';
-  }, 500); // This matches the duration of the opacity transition
+  }, 0); // This matches the duration of the opacity transition
 
 
   // Show the selected project

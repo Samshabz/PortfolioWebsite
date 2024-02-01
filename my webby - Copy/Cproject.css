@@ -70,33 +70,9 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/*img 1 and 2 */
-
-.dual-image {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: calc(100%);
-  margin-left: 100px;
-  margin-right: 100px;
-  justify-content: center;
-  gap: 20px;
-}
-
-.dual-image img {
-  width: 25%;
-}
-
 /*third image */
 
 
-.edescl {
-
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
-}
 
 
 #rot90 {
@@ -275,6 +251,11 @@ h3 {
 
 
 
+
+.innercont{
+
+  padding: 0px 0;
+}
 
 
 @media (max-width: 767px) {
