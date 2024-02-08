@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var copiedMsg = document.querySelector('.copied-message');
       if (!copiedMsg) {
         copiedMsg = document.createElement('div');
-        copiedMsg.textContent = 'Text Copied';
+        copiedMsg.textContent = 'Link copied to clipboard';
         copiedMsg.className = 'copied-message';
         document.body.appendChild(copiedMsg);
       }

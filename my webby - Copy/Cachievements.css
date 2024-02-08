@@ -1,20 +1,52 @@
 
+.achievementsbody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Use full screen height to center vertically */
+  background-color: transparent; /* No background */
+
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+.swiper-container {
+  width: 80%;
+  max-width: 80vw;
+  padding: 10vw;
+  padding-right: 10vw; 
+  margin-right: 10vw;/* Adjust based on your preference */
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  background-color: transparent; /* Slide background - can be set to transparent if needed */
+  border-radius: 8px; /* Rounded corners for a modern look */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  padding: 20px; /* Padding for content inside slides */
+}
 
 
 
+/* Navigation and Pagination customization for a neater look */
+.swiper-button-prev, .swiper-button-next {
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background: #000;
+}
 
 /* Path: Cachievements.css */
-
-.carousel-item {
-  background-color: transparent;
-  text-align: center;
-  display: none;
-  padding: 20px 110px; 
-}
-
-.carousel-item h3 {
-  /* color: #abedff; */
-}
 
 
 
@@ -36,92 +68,15 @@
 
 
 /* Center the content of .carousel-item vertically and horizontally */
-.carousel-inner .carousel-item {
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 10px); /* Use min-height instead of height */
-  overflow-y: auto; /* Allows scrolling if content overflows */
+
+
+
+@media (max-width: 800px) {
+
+.swiper-container{
+  padding-top: 35%;
 }
 
 
-
-
-/* Absolute positioning for arrows within the .carousel-inner */
-.carousel-inner {
-  position: relative;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* Responsive adjustments */
-@media (max-width: 967px) {
-
-  .carousel-item {
- 
-    padding: 20px 30px; 
-  }
-
-
-  #achievementCarousel .carousel-caption {
-    max-width: 1%;
-    margin-top: 5%;
-
-    .carousel-item {
-      padding: 0% 0%;
-    }
-
-  }
-
-  #achievementCarousel .carousel-control-prev,
-  #achievementCarousel .carousel-control-next {
-    /*width: 10%;*/
-  }
-
-
-  .carousel-item.active {
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
-  }
   
-  
-  .carousel-item p {
-    font-size: smaller; /* Adjust this to decrease font size as needed */
-  }
-  
-  /* Fix arrows to the center of the screen */
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: fixed; /* Fix position relative to the viewport */
-    top: 50%; /* Center vertically */
-    transform: translateY(-50%);
-    z-index: 2; /* Ensure it's above other content */
-  }
-  
-  /* Add a top margin or padding to the static-text class to prevent it from going under the nav bar */
-  .static-text {
-
-    font-size: 16px;
-    position: relative;
-    z-index: -1;
-    padding: 10px;
-    margin-top: 30px; /* Adjust this value to the height of your nav bar */
-  }
-  
-  /* Responsive adjustments for arrows */
-
-
-  
-}
-
-
-.carousel-item.active {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
 }
