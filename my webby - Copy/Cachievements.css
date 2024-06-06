@@ -1,9 +1,10 @@
 
 .achievementsbody {
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Use full screen height to center vertically */
+  /* Use full screen height to center vertically */
   background-color: transparent; /* No background */
 
 }
@@ -17,22 +18,21 @@ body, html {
 
 .swiper-container {
   width: 80%;
+  margin-top: 0.5rem;
   max-width: 80vw;
-  padding: 10vw;
-  padding-right: 10vw; 
-  margin-right: 10vw;/* Adjust based on your preference */
 }
 
+
 .swiper-slide {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 18px;
-  background-color: transparent; /* Slide background - can be set to transparent if needed */
+  /* make color light blue with 10% transparency */
+  background-color: rgba(4, 0, 48, 0);
   border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  box-shadow: 0 8px 16px rgba(255, 174, 0, 0.2); /* Subtle shadow for depth */
   padding: 20px; /* Padding for content inside slides */
+  
+  margin-bottom: 3vw;
 }
 
 
@@ -74,7 +74,7 @@ body, html {
 @media (max-width: 800px) {
 
 .swiper-container{
-  padding-top: 35%;
+  padding-top: 3%;
 }
 
 

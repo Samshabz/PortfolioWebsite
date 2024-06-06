@@ -3,9 +3,19 @@
 
 
 .endorsement-container {
-  max-width: 500px;
-  margin: 20px auto;
+  max-width: 30rem;
+  margin: 1rem auto;
   text-align: center;
+
+}
+
+.container{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.content{
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .endorsement-container img{
@@ -13,67 +23,57 @@
 }
 .endorsement-container h3{
 
-  font-family: 'Poppins', sans-serif;
-  font-size: 2em;
-  margin-bottom: 0px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2rem;
 }
 
 .endorsement {
-  display: inline-flex;
-  align-items: center;
   position: relative;
   overflow: hidden;
-  height: 3rem;
-  padding: 0 2rem;
-  border-radius: 1.5rem;
-  background: #000000;
-
+  background-color: #000;
+  color: #fff;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  /*justify-content: flex-start;/*  Align items to start (left) */
+  gap: 20px; /* Space between logo and text */
   cursor: pointer;
-  border: none;
-  transition: color 0.475s, background-color 0.475s;
+  transition: box-shadow 0.3s;
 }
 
 
 .endorsement:hover {
+
   color: black; /* Text color changes to black on hover */
+  background-color: #fff; /* Background color changes to white on hover */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  /* transtition between hovers */
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+
 }
 
 
-.endorsement:hover::before {
-  transform: scaleX(1);
-  
-}
 
-.endorsement::before {
- 
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(
-    82.3deg,
-    rgb(188, 188, 188) 10.8%,
-    rgb(255, 255, 255) 94.3%
-  );  
-  transition: transform 0.475s;
-  z-index: 0;
-}
 
 .company-logo {
   margin-right: 0.5rem;
   width: 50px; /* Adjust as needed */
   height: 50px; /* Adjust as needed */
 }
+.company-logowide {
+  margin-right: 0.5rem;
+  width: 120px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed */
+}
+
 
 .endorsement-text {
   position: relative;
   z-index: 2;
 }
+
 
 
 
@@ -90,21 +90,6 @@
 
 
 
-.endorsement {
-  justify-content: space-between;
-
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  /*justify-content: flex-start;/*  Align items to start (left) */
-  gap: 20px; /* Space between logo and text */
-  cursor: pointer;
-  transition: box-shadow 0.3s;
-}
 
 .button:hover {
   color:black;
@@ -119,11 +104,7 @@
 
   font-size: 20px; /* Adjust as needed */
   flex-grow: 1; /* Makes text take up the remaining space */
-  text-align: left; /* Align text to the left */
-}
-
-h1 {
-  /* color: #333; */
+  text-align: right; /* Align text to the left */
 }
 
 @media screen and (max-width: 600px) {

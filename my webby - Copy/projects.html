@@ -62,15 +62,15 @@
         <div class="projtext">  
           <h3>E-design 314 Light System</h3>
           <p>
-            In my third year's opening semester, I tackled the demanding E-Design 314 project, aiming to develop a multi-mode light system with control through analog inputs and serial communication. While the project did involve circuitry, it primarily focused on developing software and understanding technical documentation, bridging the gap between low-level hardware manipulation and high-level software development.
+            In my third year's opening semester, I tackled the demanding E-Design 314 project, aiming to develop a multi-modal light system with control through analog inputs and serial communication. While the project did involve circuitry, it primarily focused on developing low-level software and understanding technical documentation. This project involved UART, I2C, analog signal processing, and many other techniques detailed in the report below.
             <br><br>
-            Modular coding was vital for maintaining the system's flexibility, facilitating updates, and streamlining troubleshooting. Overcoming complex and peculiar bugs amid processor constraints was a significant challenge, reinforcing the value of best coding practices, the clarity that comes with a fresh mind, and the necessity of hardware consideration in programming.
+            A significant challenge was overcoming strange bugs which often related to hardware constraints, timing issues, and other factors. This was made especially difficult in a growing code base. 
             <br><br>
-            The project culminated in a multi-functional light system that was assessed through automated demonstrations and evaluation of our technical reports.  Achieving 85%, this project enriched my skills software and hardware while improving my problem-solving and design skills. 
+            The project culminated in a multi-functional light system that was assessed through automated testing stations, written tests and technical reports.  Achieving 85%, this project enriched my software ability, low-level programming, technical report writing, and broadly my problem-solving and design skills. 
           </p>
         </div>
 
-
+        <!-- 
         <div id="carouselProject1" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
               <div class="carousel-item active">
@@ -109,6 +109,8 @@
               <span class="sr-only">Next</span>
           </a>
       </div>
+
+       -->
       <div class="containerlink">     
         <a href="https://github.com/Samshabz/E-Design-314-Project.git" target="_blank" class="proj1links">Code (Github)</a>
         <a href="resources/E design FINAL.pdf" target="_blank" class="proj1links">Report</a>
@@ -132,15 +134,15 @@
         <div class="projtext">
         <h3>Hobby Electronic Projects</h3>  
         <p>
-          In leisure time I enjoy delving into electronic projects, employing Arduino and STM32 microcontrollers to bring ideas to life. Projects of note include a model parking sensor using a buzzer and ultrasonic sensor, and a temperature-dependent motor controller operating an angular heater switch.
+          In leisure time I enjoy delving into electronic projects, employing microcontrollers to bring ideas to life. Projects of note include a model parking sensor using a buzzer and ultrasonic sensor, and a temperature-dependent motor controller operating an angular heater switch.
           <br>
-          A major undertaking involved addressable RGB LED strips. I crafted diverse patterns, including a cozy fireplace effect, on a 6-meter strip. Moreover, I developed a button-controlled ping pong game, where players timed presses to return the ball on the dynamic LED strip. 
+          A major undertaking involved individually addressable RGB LED strips. I crafted diverse patterns, including a cozy fireplace effect, on a 6-meter strip. Further, I developed a button-controlled ping pong game, where players timed presses to return the ball on the dynamic LED strip. 
           <br>
-          The LEDs had a large current requirement, and to save costs I connected multiple USB ports together with diode protection into sufficient wire sizing. Serial power injection tackled bus resistance, upholding consistent voltage levels. This ensured optimal brightness and prevented line color loss. 
+          To ensure optimal current supply and brightness, I connected multiple USB ports in parallel with diode protection whilst considering wire sizes. To reduce color drop, I injected power in series to different points on the strip to tackle resistance along the bus. 
           <br>
-          Next, I made the strip Wifi controllable. I created an aesthetic local web server on the ESP32 microcontroller, allowing for control of the LEDs through a web browser.
+          Next, I employed an ESP32 to make the strip Wifi controllable. I created an aesthetic local web server which can work with or without Wifi. The server allows users to select patterns, custom colors, speeds and other parameters. Most notably is the realtime music visualizer. A python script is used on the users PC to perform Fast Fourier transforms on the current music, break it into frequency bands, analyze the volume of each sub-band, and test for an energy spike in a specific sub-band, or a beat. This is all done relative to other samples to ensure consistency. This is sent via UART to the ESP32 which visualizes the volumes and beats on the LED strip.
           <br>
-          Further improvements could be using a sophisticated switching power supply for more consistent voltage and current and a metal rail for aesthetics and thermal regulation. A dispersion filter would further improve the aesthetics. 
+          Further improvements could be using a sophisticated switching power supply for more consistent voltage and current and a metal rail for aesthetics and thermal regulation. Further, I could employ a high power port system to make connections easier. A dispersion filter would further improve the aesthetics. 
         </p>
          
         </div>
@@ -176,8 +178,9 @@
       <div id="project3" class="project hidden">
         <div class="projtext">
         <h3>Audio-visual Design</h3>  
-        <p>Audio-visual design and editing are amongst my hobbies. This involved self-teaching through youtube courses and practicing on my own and with projects for friends. </p>
-        <p> I have done work in photo-editing and photography, and music mixing. I also worked on a video editing project featuring friends. I designed graphics including residence patches which were very successful, clothing designs, promotions for friends, and logos  </p>
+        <p>Creative works are amongst my hobbies. This involved self-teaching through youtube courses and practicing on my own and with projects for friends. </p>
+        <p> I have done projects in video and photo-editing, digital art design as well as music editing. In this, I have learnt valuable creative skills which lend themselves to many business ideas and projects that I work on. 
+            </p>
         </div>
         <!--  
         <div id="carouselProject3" class="carousel slide" data-ride="carousel">
@@ -212,7 +215,7 @@
         <div class="projtext">
         <h3>Speaker Amplifier</h3>  
         <p>
-         This task was done as part of the electronics 3rd year project. It involved learning about different filter and high-power amplification techniques. The amplifier was specified to supply 24W of power to an 8 ohm load. The amplifier also required bass and treble control and was completely analogue. The amplifier turned out a success and was able to provide extremely loud sound and excellent clarity on low and high frequencies, far surpassing the quality of my JBL speaker. 
+         This project was done as part of my third year electronics module. It involved learning about different filtering and high-power amplification techniques. The amplifier was specified to supply 24W of power to an 8 ohm load. The amplifier also required bass and treble control and was fully analogue. The amplifier turned out a success and was able to provide extremely loud sound and excellent clarity on low and high frequencies, far surpassing the quality of even my JBL Charge-4 speaker. 
           </p>
         </div>
       <!--
@@ -248,17 +251,17 @@
         <div class="projtext">
         <h3>E-design 344 Health Monitor</h3>  
         <p>
-          Our third year, second-semester E-design project saw us creating a predimonantly analog health-monitoring system. This involved a pedometer, weight sensor, heart rate sensor, and temperature sensor and output through a microcontroller and screen. These simple analog components required us to read through datasheets, understanding governing theory of the devices, consider project specifications, and create unique circuit designs. These circuits would intepret the signals in a logical way and condition the signal-to-noise ratio. The project involved reading up on theory, creating a design, simulating that design, and finally implementing it. When designing we had to consider the hardware limitations and ensure that the circuit would be robust to noise. The circuit also had to be calibrated for tolerances. Overall, I learnt valuable skills and received x%. 
+          Our third year, second-semester E-design project saw us creating a predominantly analog health-monitoring system. This involved a pedometer, weight sensor, heart rate sensor, and temperature sensor which were processed via a microcontroller and outputted via Wifi to a web server or directly to a screen. These simple analog components required us to read through datasheets, understanding governing theory and equations of the devices, consider project specifications, and create fully unique circuit designs. These circuits had to logically read the sensors value and often filter and amplify the signal. Each stage involved a literature review, creating a design, simulating that design, and finally implementing and testing it. When designing we had to consider the hardware limitations and ensure that the circuit would be robust to noise. The circuit also had to be calibrated for tolerances. Overall, I learnt valuable skills and received x%. 
 
         </p>
         </div>
 
  
-       
+      <!-- 
         <div class="image-container">
           <img src="./resources/newempty.png" alt="Image 2" id="edes2" onclick="openFullscreen('fullscreen4')">
         </div>
-
+      -->
 
 
 
@@ -331,7 +334,7 @@
 
 
  
-      
+          <!--
   <div id="fullscreen1" class="fullscreen" onclick="closeFullscreen('fullscreen1')">
     <img src="./resources/softdes.svg" alt="Fullscreen Image 1">
   </div>
@@ -344,7 +347,7 @@
   <div id="fullscreen4" class="fullscreen" onclick="closeFullscreen('fullscreen4')">
     <img src="./resources/whiteversion.png" alt="Fullscreen Image 4">
   </div>
-    
+    -->
 
 
 

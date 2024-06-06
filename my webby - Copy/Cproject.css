@@ -33,8 +33,7 @@
   color: #ffffff;
   padding: 0.5% 1%;
   display: inline-flex;
-  margin-left: 0.5%;
-  margin-right: 0.5%;
+  margin: 0 0.4rem;
   text-decoration: none;
   border-radius: 5px;
   max-width: max-content;
@@ -45,7 +44,9 @@
 .containerlink {
 
   display: flex;
+  margin-top: 2rem;
   justify-content: center;
+  
 }
 
 .proj1links:hover {
@@ -162,7 +163,6 @@
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 30px;
 }
 
 .secondary-nav-button {
@@ -272,6 +272,7 @@ project.hidden {
 h3 {
 
   padding-top: 20px;
+  margin-top: none;
 }
 
 

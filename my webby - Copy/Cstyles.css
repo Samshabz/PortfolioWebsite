@@ -1,61 +1,40 @@
-/* :root {
-  --para-color: #000; 
-  --h3-color: #0072B1;
-  --back-color: #d2aa72;
-} */
-
 :root {
-  --h3-color: #7492b6; /* Main color for headings */
-  --back-color: #24385b; /* Background color */
+  --h3-color: #ffffff; /* Main color for headings */
+  --back-color: #2f2f2f; /* Background color */
   --para-color: #bdc3c7; /* Default text color */
+  --backtransparent-color: #1d1d1d; /* Background color */
 }
-
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
- 
   color: #fff;
   text-align: center;
-  
-}
-body p{
-  text-align: left;
 }
 
-nav ul li.active a {
-  background-color: #ffffff;  /* Change as per your design */
-  color: #000000;
-  border-radius: 4px;  /* Optional: for rounded corners */
-  /* Optional: for some spacing */
+body p {
+  text-align: left;
 }
 
 header {
   display: flex;
   align-items: center;
   justify-content: center; /* Changed from space-between to center */
-  background: rgba(20, 23, 28, 1);
- 
-  position: fixed;
+  background: var(--backtransparent-color);
+  position: relative;
   width: 100%;
-  z-index: 1;
+  z-index: 1000;
 }
 
 nav ul {
-  list-style-type: none !important;
-
-  display: flex;
-  justify-content: center;
-  gap: 20px;
   margin: 0;
   padding: 0;
 }
-
 
 nav ul li a {
   color: #fff;
@@ -63,14 +42,16 @@ nav ul li a {
   font-size: 1em;
   cursor: pointer;
   padding: 10px 15px;
+  display: inline-block;
+  padding: 1vh 2vw; /* Vertical padding relative to viewport height */
+  font-size: 1.2vw; /* Adjust font size */
 }
-
 
 nav ul li a:hover {
   background-color: #ffffff; /* Change to desired background color */
-  color: #000; 
-   border-radius: 4px;
-   text-decoration: none;
+  color: #000;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 .container {
@@ -79,44 +60,29 @@ nav ul li a:hover {
 }
 
 h3 {
-
-  color:var(--h3-color);
-  
-  /* MAIN HEADING h3 COLOR */
+  color: var(--h3-color);
 }
-
 
 body {
   position: relative;
   background: var(--back-color);
-  
-  /*MAIN BACKGROUND COL*/
- 
 }
-
 
 .content p {
   font-size: 1em;
-  /* MAIN PARAGRAPH COLOR */
   color: var(--para-color);
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
-
-em{
-
+em {
   color: var(--para-color);
-
 }
+
 p {
   color: var(--para-color);
-  /* MAIN PARAGRAPH COLOR */
-
 }
 
-
 .content {
-
   padding: 60px 0;
   margin-bottom: 20px;
 }
@@ -126,32 +92,28 @@ p {
   margin-bottom: 20px;
 }
 
-
-
-/*footer {
-  background-color: rgba(31, 36, 44, 1);
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  bottom: 0;
-  left: 0;
+nav {
+  height: 60px; /* Adjust the height as needed */
   width: 100%;
 }
 
-footer p {
-  color: #eee9e9;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1em;
+nav ul {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Align items to the start of the nav */
+  padding-left: 2vw; /* Add some padding inside the nav */
+  list-style: none;
+  margin: 0;
 }
 
-*/
+nav ul li {
+  margin-right: 2vw; /* Spacing between nav items */
+}
 
-
-/* Hamburger Menu Styling */
 .hamburger-menu {
   display: none;
   cursor: pointer;
-  /* Additional styling for bars */
 }
 
 .hamburger-menu .bar {
@@ -162,141 +124,73 @@ footer p {
   transition: 0.4s;
 }
 
-/* Hide regular navigation on small screens */
-@media (max-width: 800px) {
-  .hamburger-menu {
-      display: block;
-      position: absolute;
-      top: 7px; /* Adjust as necessary */
-      right: 20px; /* Adjust as necessary */
-      z-index: 20; /* Above other content */
-      padding-right: 40px;
-  }
-  
-  nav ul {
-      display: none; /* Hidden by default */
-      flex-direction: column; /* Stack links vertically */
-      align-items: center; /* Center align the links */
-      width: 100%; /* Full width */
-      position: fixed; /* Fixed position on the top */
-      top: 9%; /* Below the hamburger menu */
-      left: 0;
-      right: 0;
-      background-color: rgba(20, 23, 28, 0.95); /* Semi-transparent background */
-      margin: 0;
-      
-      padding-top: 10px; /* Space at the top */
-      padding-bottom: 20px; /* Space at the bottom */
-  }
-
-  nav ul li {
-      padding: 0px 0; /* Add padding to each link */
-  }
-
-  nav ul li a {
-      display: block; /* Make the link fill the container */
-      font-size: 1.2em; /* Increase font size for touch accessibility */
-  }
-  
-  .show {
-      display: flex; /* Show the menu */
-      flex-direction: column;
-      align-items: center;
-  }
-}
-
-
-/* Carousel Styling */
-
-
-
-
-/* Set a fixed height for the navbar */
-nav {
-  height: 10vh; /* Adjust the height as needed */
-  width: 100%;
-}
-
-/* Center the content vertically within the navbar */
-nav ul {
-  height: 100%;
-  display: flex;
-  align-items: center; /* This will vertically center the ul if the nav is taller */
-  justify-content: flex-start; /* Align items to the start of the nav */
-  padding-left: 2vw; /* Add some padding inside the nav */
-  list-style: none;
-  margin: 0;
-  
-}
-
-/* Adjust list items and links */
-nav ul li {
-  margin-right: 2vw; /* Spacing between nav items */
-}
-
-nav ul li a {
-  display: inline-block;
-  padding: 1vh 2vw; /* Vertical padding relative to viewport height */
-  font-size: 1.2vw; /* Adjust font size */
-  text-decoration: none;
-  
-}
-
-/* Ensure that the .hamburger-menu is also vertically centered */
-.hamburger-menu {
-  height: 10vh; /* Same as the navbar height */
-
-  align-items: center;
-  /* Additional styles for the hamburger menu */
-}
-
-/* Responsive adjustments */
-
-
-/* CSS to highlight the active link */
 nav ul li a.active {
   background-color: #ffffff;
   color: black;
   border-radius: 4px;
   text-decoration: none;
-  /* Add any other styles you want for the active link */
 }
-
 
 @media (min-width: 1200px) {
   nav ul li a {
-      font-size: 14px; /* Fixed font size for large screens */
-      padding: 10px 20px; /* Fixed padding for large screens */
+    font-size: 14px; /* Fixed font size for large screens */
+    padding: 10px 20px; /* Fixed padding for large screens */
   }
 }
 
-
-
-@media (max-width: 768px) {
-  nav ul {
-      justify-content: center; /* Center the items on small screens */
-      padding-left: 0; /* Remove padding on small screens */
-  }
-
-  nav ul li a {
-      font-size: 16px; /* Larger font size for readability on small screens */
-      padding: 2vw; /* Larger padding for easier touch */
-  }
-
+@media (max-width: 800px) {
   .hamburger-menu {
-      display: block;
+    display: block;
+    position: absolute;
+    top: 15px; /* Adjust as necessary */
+    right: 20px; /* Adjust as necessary */
+    z-index: 20; /* Above other content */
+    cursor: pointer;
+  }
+
+  .hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
   }
 
   nav ul {
-      display: none;
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack links vertically */
+    align-items: center; /* Center align the links */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position on the top */
+    top: 60px; /* Aligns below the header */
+    left: 0;
+    right: 0;
+    background-color: rgba(20, 23, 28, 0.95); /* Semi-transparent background */
+    margin: 0;
+    padding-top: 10px; /* Space at the top */
+    padding-bottom: 20px; /* Space at the bottom */
+    z-index: 1000;
+  }
+
+  nav ul.showa{
+    display: flex; /* Show the nav when the class is added */
   }
 
   nav ul li {
-      display: block; /* Stack the list items */
-      margin-right: 0; /* Remove right margin for stacked items */
+    padding: 0px 0; /* Add padding to each link */
+    justify-content: center; /* Center the items on small screens */
+    padding-left: 0; /* Remove padding on small screens */
+  }
+
+  nav ul li a {
+    display: block; /* Make the link fill the container */
+    font-size: 1.2rem; /* Increase font size for touch accessibility */
+    padding: 2vw; /* Larger padding for easier touch */
+    margin-bottom: 1rem;
+    margin-right: 0; /* Remove right margin for stacked items */
   }
 }
 
-/* For larger screens, you might want to cap the maximum size */
-
-
+body.no-scroll {
+  overflow: hidden;
+}

@@ -1,3 +1,29 @@
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+  background-color: #333;
+  
+}
+
+.content{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  align-self: flex-start;
+}
+
+.contact-icon, .copy-icon {
+  height: 24px; /* Standardize icon sizes */
+  width: auto;  /* Standardize icon sizes */
+  margin-right: 10px;
+  transition: filter 0.3s ease;
+  display: block; /* Ensure block level for proper alignment */
+}
+
+
 #contact-info {
   display: flex;
   flex-direction: column;
@@ -19,28 +45,15 @@
 
 .copy-icon{
   color: white;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 .icon-link {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: rgb(204, 204, 204); Icon and text color
-}
-
-.contact-icon {
-  width: 24px; /* Icon size */
-  height: 24px; /* Icon size */
-  margin-right: 10px;
-  transition: filter 0.3s ease;
-}
-
-.copy-icon {
-  width: 20px; /* Clipboard icon size */
-  height: 20px; /* Clipboard icon size */
-  margin-left: 10px;
-  cursor: pointer;
-  transition: filter 0.3s ease;
+  color: rgb(204, 204, 204);  /* Icon color */
 }
 
 .copy-icon-container {
@@ -59,29 +72,12 @@
 .copy-icon:hover {
   /* your hover styles here */
 }
-/*
 
-.copied-message {
-  margin-left: 10px;
-  padding: 5px;
-  background-color: #f0f0f0;
-  color: #333;
-  border-radius: 5px;
-  font-size: 0.8em;
-  position: absolute; /* Position it relative to the parent 
-  top: 100%; /* Push down by full height of the parent 
-  left: 0;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-  pointer-events: none; /* Allows clicks to pass through 
-  z-index: 1; /* Ensure it's above other items 
-}
-*/
 
 .copied-message {
   display: none; /* Hide the message by default */
   position: fixed; /* Fixed at the top */
-  top: 10%;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
@@ -97,22 +93,11 @@
   opacity: 1;
 }
 
-.content{
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  padding-top: 109px;
-}
+
 
 .contact-icon{
   display: block;
   
   justify-content: right;
   align-items: right;
-}
-
-#phoneicon{
-  width: 24px;
-  height: 24px;
-  
 }
