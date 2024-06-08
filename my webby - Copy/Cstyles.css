@@ -1,15 +1,30 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
 :root {
   --h3-color: #ffffff; /* Main color for headings */
-  --back-color: #2f2f2f; /* Background color */
+  --back-color: #29312c; /* Background color */
   --para-color: #bdc3c7; /* Default text color */
   --backtransparent-color: #1d1d1d; /* Background color */
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+html {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300; 
+ 
+}
+h3{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+
+}
+
 
 body {
-  font-family: 'Times New Roman', Times, serif;
+  
+  
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -39,19 +54,17 @@ nav ul {
 nav ul li a {
   color: #fff;
   text-decoration: none;
-  font-size: 1em;
   cursor: pointer;
-  padding: 10px 15px;
+  padding: 0.4rem 0.7rem;
   display: inline-block;
-  padding: 1vh 2vw; /* Vertical padding relative to viewport height */
-  font-size: 1.2vw; /* Adjust font size */
 }
 
 nav ul li a:hover {
   background-color: #ffffff; /* Change to desired background color */
   color: #000;
-  border-radius: 4px;
+  border-radius: 24px;
   text-decoration: none;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 
 .container {
@@ -69,7 +82,7 @@ body {
 }
 
 .content p {
-  font-size: 1em;
+  font-size: 1rem;
   color: var(--para-color);
   margin-bottom: 0px;
 }
@@ -83,17 +96,17 @@ p {
 }
 
 .content {
-  padding: 60px 0;
+  padding: 1rem 0;
   margin-bottom: 20px;
 }
 
 .content h3 {
-  font-size: 2em;
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
 nav {
-  height: 60px; /* Adjust the height as needed */
+  height: 3.2rem; /* Adjust the height as needed */
   width: 100%;
 }
 
@@ -102,13 +115,13 @@ nav ul {
   display: flex;
   align-items: center;
   justify-content: center; /* Align items to the start of the nav */
-  padding-left: 2vw; /* Add some padding inside the nav */
+
   list-style: none;
   margin: 0;
 }
 
 nav ul li {
-  margin-right: 2vw; /* Spacing between nav items */
+  margin-right: 0.8rem; /* Spacing between nav items */
 }
 
 .hamburger-menu {
@@ -127,23 +140,43 @@ nav ul li {
 nav ul li a.active {
   background-color: #ffffff;
   color: black;
-  border-radius: 4px;
+  border-radius: 24px;
   text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-  nav ul li a {
-    font-size: 14px; /* Fixed font size for large screens */
-    padding: 10px 20px; /* Fixed padding for large screens */
-  }
-}
+
 
 @media (max-width: 800px) {
+  .secondary-nav {
+    margin-right: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center; /* Adjust as needed */
+    gap: 10px; /* Space between buttons */
+    font-size: 0.9rem;
+  }
+  
+
+  nav ul li a:hover {
+    background-color: #ffffff; /* Change to desired background color */
+    color: #000;
+    font-size: 1rem;
+    padding: 0.6rem; /* Larger padding for easier touch */
+    margin-bottom: 0.5rem;
+    margin-right: 0; /* Remove right margin for stacked items */
+    
+    
+    text-decoration: none;
+  }
+
+
   .hamburger-menu {
     display: block;
     position: absolute;
-    top: 15px; /* Adjust as necessary */
+    top: 0.5rem; /* Adjust as necessary */
     right: 20px; /* Adjust as necessary */
+
     z-index: 20; /* Above other content */
     cursor: pointer;
   }
@@ -153,8 +186,18 @@ nav ul li a.active {
     height: 3px;
     background-color: #fff;
     margin: 5px 0;
+    
     transition: 0.4s;
   }
+
+
+  nav ul li a.active {
+    padding: 0.6rem; /* Larger padding for easier touch */
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0; /* Remove right margin for stacked items */
+  }
+
 
   nav ul {
     display: none; /* Hidden by default */
@@ -162,13 +205,13 @@ nav ul li a.active {
     align-items: center; /* Center align the links */
     width: 100%; /* Full width */
     position: fixed; /* Fixed position on the top */
-    top: 60px; /* Aligns below the header */
+    top: 3rem; /* Aligns below the header */
     left: 0;
     right: 0;
     background-color: rgba(20, 23, 28, 0.95); /* Semi-transparent background */
     margin: 0;
-    padding-top: 10px; /* Space at the top */
-    padding-bottom: 20px; /* Space at the bottom */
+    padding-top: 0; /* Space at the top */
+    padding-bottom: 0; /* Space at the bottom */
     z-index: 1000;
   }
 
@@ -177,16 +220,17 @@ nav ul li a.active {
   }
 
   nav ul li {
-    padding: 0px 0; /* Add padding to each link */
+    padding: 0 0;
+ /* Add padding to each link */
     justify-content: center; /* Center the items on small screens */
     padding-left: 0; /* Remove padding on small screens */
   }
 
   nav ul li a {
     display: block; /* Make the link fill the container */
-    font-size: 1.2rem; /* Increase font size for touch accessibility */
-    padding: 2vw; /* Larger padding for easier touch */
-    margin-bottom: 1rem;
+    font-size: 1rem; /* Increase font size for touch accessibility */
+    padding: 0.6rem; /* Larger padding for easier touch */
+    margin-bottom: 0.5rem;
     margin-right: 0; /* Remove right margin for stacked items */
   }
 }

@@ -1,23 +1,31 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 .container{
   display: flex;
   justify-content: center;
-  height: 90vh;
-  background-color: #333;
+  height: 100vh;
+  
   
 }
 
+h3{
+  margin-top: 0.2rem;
+}
+
 .content{
+  max-width: 30rem;
+  width: 100%; /* Ensure full width */
   align-items: center;
   justify-content: center;
-  display: flex;
+  padding-top: 0;
   align-self: flex-start;
 }
 
 .contact-icon, .copy-icon {
+  
   height: 24px; /* Standardize icon sizes */
   width: auto;  /* Standardize icon sizes */
+  padding: 0.8rem 1.6rem;
   margin-right: 10px;
   transition: filter 0.3s ease;
   display: block; /* Ensure block level for proper alignment */
@@ -37,10 +45,13 @@
 }*/
 
 .contact-item {
+  padding: 0 0;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  outline: 1.4px solid rgb(255, 255, 255);
   display: flex;
   justify-content: space-between; /* Align text to the left and clipboard icon to the right */
   align-items: center;
-  margin-bottom: 10px; /* space between contact items */
 }
 
 .copy-icon{
@@ -64,14 +75,6 @@
   filter: invert(100%);
 }
 
-/* Add any additional hover styles you want for the icons */
-.contact-icon:hover {
-  /* your hover styles here */
-}
-
-.copy-icon:hover {
-  /* your hover styles here */
-}
 
 
 .copied-message {
@@ -84,7 +87,7 @@
   /* background-color: #333; */
   /* color: #fff; */
   border-radius: 5px;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   z-index: 10;
 }
 
@@ -97,7 +100,6 @@
 
 .contact-icon{
   display: block;
-  
   justify-content: right;
   align-items: right;
 }

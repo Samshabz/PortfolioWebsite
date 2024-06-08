@@ -11,7 +11,7 @@
 
 
 body, html {
-  height: 100%;
+  height: 100vw;
   margin: 0;
 }
 
@@ -29,7 +29,7 @@ body, html {
   /* make color light blue with 10% transparency */
   background-color: rgba(4, 0, 48, 0);
   border-radius: 8px; /* Rounded corners for a modern look */
-  box-shadow: 0 8px 16px rgba(255, 174, 0, 0.2); /* Subtle shadow for depth */
+  outline: 1.4px solid rgb(255, 255, 255); /* Subtle shadow for depth */
   padding: 20px; /* Padding for content inside slides */
   
   margin-bottom: 3vw;
@@ -53,7 +53,7 @@ body, html {
 .static-text {
   text-align: center; /* Center the text */
 
-  font-size: 16px;
+  
   position: relative;
   z-index: -1;
   margin-top: 20px;

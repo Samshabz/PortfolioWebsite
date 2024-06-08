@@ -1,5 +1,5 @@
 var currentProject = 1;
-var projectCount = 5;
+var projectCount = 4;
 function switchProject(projectNumber) {
   // Check if the project number is valid
 

@@ -1,122 +1,118 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+.content{
+  padding-top: 0.2rem;
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure no horizontal overflow */
+}
 
+.content {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: flex-start; /* Align items to the top */
+  height: 100vh; /* Full viewport height */
+  overflow-x: hidden; /* Disable horizontal overflow */
+  
+}
 
 .endorsement-container {
   max-width: 30rem;
-  margin: 1rem auto;
+  width: 100%; /* Ensure full width */
+  margin: 0; /* Remove auto margin */
   text-align: center;
-
+  
 }
 
-.container{
-  margin-top: 0px;
-  padding-top: 0px;
-}
-.content{
-  margin-top: 0px;
-  padding-top: 0px;
-}
-
-.endorsement-container img{
+.endorsement-container img {
   z-index: 2;
 }
-.endorsement-container h3{
 
-  font-family: 'Times New Roman', Times, serif;
+.endorsement-container h3 {
   font-size: 2rem;
+  margin: 0;
 }
 
 .endorsement {
   position: relative;
   overflow: hidden;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  outline: 1.4px solid rgb(255, 255, 255);
   color: #fff;
   padding: 0.7rem;
   margin-top: 1rem;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  /*justify-content: flex-start;/*  Align items to start (left) */
-  gap: 20px; /* Space between logo and text */
+  gap: 20px;
   cursor: pointer;
   transition: box-shadow 0.3s;
 }
 
 
-.endorsement:hover {
 
-  color: black; /* Text color changes to black on hover */
-  background-color: #fff; /* Background color changes to white on hover */
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-  /* transtition between hovers */
+.button:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-
 }
 
-
-
+.container {
+  height: 100%; /* Use full height to maintain layout */
+}
 
 .company-logo {
   margin-right: 0.5rem;
-  width: 50px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
-}
-.company-logowide {
-  margin-right: 0.5rem;
-  width: 120px; /* Adjust as needed */
-  height: 50px; /* Adjust as needed */
+  width: 50px;
+  height: 50px;
 }
 
+.company-logowide {
+  margin-right: 0.5rem;
+  width: 120px;
+  height: 50px;
+}
 
 .endorsement-text {
   position: relative;
   z-index: 2;
+  
+  flex-grow: 1;
+  text-align: right;
 }
 
-
-
-
 .endorsement .new-tab-icon {
-  display: block; /* Show the icon on hover */
+  display: block;
 }
 
 .new-tab-icon {
-  display: none; /* Hide the icon by default */
-  width: 24px; /* Example size, adjust as needed */
-  height: 24px; /* Example size, adjust as needed */
-  transition: opacity 0.3s; /* Smooth transition for the icon appearance */
-}
-
-
-
-
-.button:hover {
-  color:black;
+  display: none;
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s;
 }
 
 .company-logo {
-  max-width: 50px; /* Adjust as needed */
-  display: block; /* Ensure the logo is a block-level element */
+  max-width: 50px;
+  display: block;
 }
 
 .endorsement-text {
-
-  font-size: 20px; /* Adjust as needed */
-  flex-grow: 1; /* Makes text take up the remaining space */
-  text-align: right; /* Align text to the left */
+  
+  flex-grow: 1;
+  text-align: right;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .endorsement-container {
     width: 90%;
     margin: 0 auto;
   }
 
   .company-logo {
-    max-width: 80px; /* Adjust for smaller screens */
+    max-width: 80px;
   }
 }
-
-
-
