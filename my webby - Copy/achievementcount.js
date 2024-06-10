@@ -80,12 +80,14 @@ $(document).ready(function() {
       // Trigger previous project
       switchProject(currentProject - 1);
     },
-    threshold: 85
+    threshold: 5
   });
 });
 
 
 $(document).ready(function() {
+  initializeSwipe('body');
+  initializeSwipe('html');
   initializeSwipe('#carouselProject1');
   initializeSwipe('#carouselProject2');
   initializeSwipe('#carouselProject3');

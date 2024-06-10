@@ -14,6 +14,18 @@ h1{
   padding-top: 0.4rem;
 }
 
+@media (max-width: 800px) {
+  body, html{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; /* Ensure no horizontal overflow */
+  
+  }
+}
 
 .Achh3{
   font-size: 5rem;
@@ -24,7 +36,13 @@ h1{
 /*projects start */
 
 
+.container {
+  touch-action: pan-y; /* Allow vertical scrolling but still capture horizontal swipes */
+}
 
+.content {
+  touch-action: pan-y; /* Allow vertical scrolling but still capture horizontal swipes */
+}
 
 
 
@@ -329,6 +347,11 @@ h3 {
 
 @media (max-width: 800px) {
 
+  .project:not(.hidden) {
+    padding-bottom: 8rem !important;
+    /*color*/
+  }
+  
   #edes2 img{
     width: 80%;
     height: auto;
@@ -345,12 +368,13 @@ h3 {
   }
 
   .projtext {
-    max-width: 90%;
+    max-width: 98%;
     /* or whatever max width you prefer */
     margin-left: auto;
     /* These two margin properties will center your container */
-    margin-right: auto;
-    padding: 0 35px;
+    margin-right: 2rem;
+    padding: 0;
+    
     /* Add padding to ensure text doesn't go under arrows */
     /* rest of your styles */
    
@@ -359,11 +383,13 @@ h3 {
 
 
   .arrow-left {
+    display: none;
     left: 0px;
   }
 
   .arrow-right {
-    right: 4px;
+    display: none;
+    right: 0px;
   }
 
   .arrow i {

@@ -205,7 +205,7 @@ body {
   .home-button {
     margin-top: 0.5rem;
     /*lin grad for background color*/
-    background: linear-gradient(90deg, #868686aa 0%, #ffffff00 100%);
+    background: linear-gradient(45deg, #000000e2 0%, #40404043 100%);
   }
 
   .homepage-content {
@@ -221,8 +221,7 @@ body {
 
   .home-button {
     padding-left: 1.5rem;
-    padding-right: 10rem;
-    border-radius: 0px;
+    padding-right: 8rem;
   }
 
 
@@ -261,4 +260,31 @@ body {
   .indexfooter p {
     color: var(--font-color);
   }
+
+
+
+
+
+  .homepage-content {
+    text-align: right;
+    position: absolute;
+    align-items: normal;
+    justify-content: baseline;
+    bottom: 15%;
+    left: auto;
+    right: 0rem;
+    width: max-content;
+    z-index: 1000;
+    
+  
+  }
+  .home-button:hover{
+    background: none;
+  }
+
+
+
+  
+
+
 }
