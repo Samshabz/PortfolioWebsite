@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
       setTimeout(() => {
         window.location.href = href;
-      }, 500); // Match this to the CSS transition duration
+      }, 200); // Match this to the CSS transition duration
     });
   });
 });
