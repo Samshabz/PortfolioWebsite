@@ -1,8 +1,8 @@
 var currentProject = 1;
 var projectCount = 5;
+
 function switchProject(projectNumber) {
   // Check if the project number is valid
-
   if (projectNumber > projectCount) {
     projectNumber = 1;
   }
@@ -10,15 +10,6 @@ function switchProject(projectNumber) {
   if (projectNumber < 1) {
     projectNumber = projectCount;
   }
-
-  if (projectNumber < 1 || projectNumber > projectCount) {
-    return;
-  }
-
-
-  
-
-
 
   // Update the current project number
   currentProject = projectNumber;
@@ -29,13 +20,13 @@ function switchProject(projectNumber) {
     buttons[i].classList.remove("active");
   }
 
-  // Hide all projects
+  // Fade out the current project
   var projects = document.getElementsByClassName("project");
   for (var j = 0; j < projects.length; j++) {
     projects[j].style.opacity = '0';
     setTimeout(function(project) {
       project.classList.add("hidden");
-    }, 0, projects[j]); // Delay hiding until after the transition
+    }, 500, projects[j]); // Delay hiding until after the transition
   }
 
   setTimeout(function() {
@@ -45,32 +36,17 @@ function switchProject(projectNumber) {
     // Force reflow/repaint to ensure the transition starts
     void selectedProject.offsetWidth;
     selectedProject.style.opacity = '1';
-  }, 0); // This matches the duration of the opacity transition
-
-
-  // Show the selected project
-  var selectedProject = document.getElementById("project" + projectNumber);
-  selectedProject.classList.remove("hidden");
+  }, 500); // This matches the duration of the opacity transition
 
   // Add active class to the selected button
   buttons[projectNumber - 1].classList.add("active");
-
-  // Disable or enable the arrows as necessary
-  var arrowLeft = document.querySelector(".arrow-left");
-  var arrowRight = document.querySelector(".arrow-right");
-  //arrowLeft.style.visibility = (projectNumber === 1) ? "hidden" : "visible";
-  //arrowRight.style.visibility = (projectNumber === projectCount) ? "hidden" : "visible";
-
-
 }
 
 // Switch to Project 1 by default
 switchProject(1);
 
-
-
 $(document).ready(function() {
-  // Assuming your .container element is the swipe target
+  // Initialize swipe functionality for the container
   $('.container').swipe({
     swipeLeft: function(event, direction, distance, duration, fingerCount) {
       // Trigger next project
@@ -84,38 +60,6 @@ $(document).ready(function() {
   });
 });
 
-
-$(document).ready(function() {
-  initializeSwipe('body');
-  initializeSwipe('html');
-
-  initializeSwipe('#carouselProject1');
-  initializeSwipe('#carouselProject2');
-  initializeSwipe('#carouselProject3');
-  initializeSwipe('#carouselProject4');
-  initializeSwipe('#carouselProject5');
-  // ... add more initializeSwipe calls for additional project carousels
-});
-
-function initializeSwipe(carouselId) {
-  $(carouselId).swipe({
-      swipeStart: function(event, direction, distance, duration, fingerCount) {
-          isSwiping = true; // Set flag on swipe start
-      },
-      swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-          event.stopPropagation(); // Stop event bubbling
-          if (direction == 'left') $(this).carousel('next');
-          if (direction == 'right') $(this).carousel('prev');
-      },
-      swipeEnd: function(event, direction, distance, duration, fingerCount) {
-          isSwiping = false; // Reset flag on swipe end
-      },
-      allowPageScroll: "vertical",
-      threshold: 5
-  });
-}
-
-
 function openFullscreen(fullscreenId) {
   document.getElementById(fullscreenId).style.display = 'flex';
   document.body.classList.add('no-scroll');
@@ -126,4 +70,38 @@ function closeFullscreen(fullscreenId) {
   document.getElementById(fullscreenId).style.display = 'none';
   document.body.classList.remove('no-scroll');
   document.querySelector('.contenta').classList.remove('blur-background');
+}
+
+// Initialize swipe functionality for carousels
+$(document).ready(function() {
+  var carousels = [
+    '#carouselProject1',
+    '#carouselProject2',
+    '#carouselProject3',
+    '#carouselProject4',
+    '#carouselProject5'
+    // ... add more carousel IDs as needed
+  ];
+
+  carousels.forEach(function(carouselId) {
+    initializeSwipe(carouselId);
+  });
+});
+
+function initializeSwipe(carouselId) {
+  $(carouselId).swipe({
+    swipeStart: function(event, direction, distance, duration, fingerCount) {
+      isSwiping = true; // Set flag on swipe start
+    },
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+      event.stopPropagation(); // Stop event bubbling
+      if (direction == 'left') $(this).carousel('next');
+      if (direction == 'right') $(this).carousel('prev');
+    },
+    swipeEnd: function(event, direction, distance, duration, fingerCount) {
+      isSwiping = false; // Reset flag on swipe end
+    },
+    allowPageScroll: "vertical",
+    threshold: 5
+  });
 }

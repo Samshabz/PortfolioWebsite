@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
-  <link rel="stylesheet" href="Cstyles.css" />
-  <link rel="stylesheet" href="Cendorsements.css" />
+  <link rel="preload" href="Cstyles.css" as="style">
+  <link rel="preload" href="Cendorsements.css" as="style">
+  <link rel="stylesheet" href="Cstyles.css">
+  <link rel="stylesheet" href="Cendorsements.css">
 </head>
 <body>
   <header>
@@ -28,7 +30,7 @@
     <div class="content">
       <div class="endorsement-container">
         <h3>Endorsements</h3>
-        <div class="endorsement button" onclick="window.open('resources/octlet.pdf', '_blank')">
+        <div class="endorsement button" onclick="window.open('resources/octocoletter.pdf', '_blank')">
           <img src="resources/octicon.png" alt="Company Logo" class="company-logo">
           <span class="endorsement-text">Octoco</span>
           <img src="resources/icons/new tab.png" alt="New Tab Icon" class="new-tab-icon">
@@ -50,5 +52,6 @@
   </div>
   <footer></footer>
   <script src="mainnav.js"></script> <!-- Link to the external JavaScript file -->
+  <script src="transitions.js"></script> <!-- Link to the external JavaScript file for transitions -->
 </body>
 </html>

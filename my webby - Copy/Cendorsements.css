@@ -13,8 +13,8 @@ body, html {
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   justify-content: flex-start; /* Align items to the top */
-  height: 100vh; /* Full viewport height */
-  overflow-x: hidden; /* Disable horizontal overflow */
+  height: auto; /* Full viewport height */
+   /* Disable horizontal overflow */
   
 }
 

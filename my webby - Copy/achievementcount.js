@@ -2,7 +2,6 @@ var currentProject = 1;
 var projectCount = 4;
 function switchProject(projectNumber) {
   // Check if the project number is valid
-
   if (projectNumber > projectCount) {
     projectNumber = 1;
   }
@@ -15,11 +14,6 @@ function switchProject(projectNumber) {
     return;
   }
 
-
-  
-
-
-
   // Update the current project number
   currentProject = projectNumber;
 
@@ -29,13 +23,13 @@ function switchProject(projectNumber) {
     buttons[i].classList.remove("active");
   }
 
-  // Hide all projects
+  // Fade out the current project
   var projects = document.getElementsByClassName("project");
   for (var j = 0; j < projects.length; j++) {
     projects[j].style.opacity = '0';
     setTimeout(function(project) {
       project.classList.add("hidden");
-    }, 0, projects[j]); // Delay hiding until after the transition
+    }, 200, projects[j]); // Delay hiding until after the transition
   }
 
   setTimeout(function() {
@@ -45,23 +39,25 @@ function switchProject(projectNumber) {
     // Force reflow/repaint to ensure the transition starts
     void selectedProject.offsetWidth;
     selectedProject.style.opacity = '1';
-  }, 0); // This matches the duration of the opacity transition
-
-
-  // Show the selected project
-  var selectedProject = document.getElementById("project" + projectNumber);
-  selectedProject.classList.remove("hidden");
+  }, 200); // This matches the duration of the opacity transition
 
   // Add active class to the selected button
   buttons[projectNumber - 1].classList.add("active");
+
+  // Fade in the secondary navigation
+  var secondaryNav = document.querySelector('.secondary-nav');
+  secondaryNav.classList.add('fade-out');
+
+  setTimeout(function() {
+    secondaryNav.classList.remove('fade-out');
+    secondaryNav.classList.add('fade-in');
+  }, 200); // Match this to the CSS transition duration
 
   // Disable or enable the arrows as necessary
   var arrowLeft = document.querySelector(".arrow-left");
   var arrowRight = document.querySelector(".arrow-right");
   //arrowLeft.style.visibility = (projectNumber === 1) ? "hidden" : "visible";
   //arrowRight.style.visibility = (projectNumber === projectCount) ? "hidden" : "visible";
-
-
 }
 
 // Switch to Project 1 by default

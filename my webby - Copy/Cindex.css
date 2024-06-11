@@ -145,7 +145,7 @@ body {
   text-decoration: none;
   margin: 0.5rem;
   display: inline-block;
-  border-radius: 1.3rem;
+  border-radius: 1.2rem;
   /* box-shadow: 0 0.125rem 0.125rem #00000045; */
   box-shadow: 0 0 0.5rem #51515145;
   transition: all 0.3s ease-in-out;
@@ -173,7 +173,7 @@ body {
   overflow: hidden;
   border-right: .15em solid lightblue;
   width: 0;
-  animation: typing 1.4s steps(200, end) forwards, blink-caret .75s step-end 3;
+  animation: typing 1.4s steps(200, end) 0.35s forwards, blink-caret .75s step-end 3 1s;
   animation-fill-mode: forwards;
 }
 
@@ -199,30 +199,58 @@ body {
   }
 }
 
+
+@keyframes underline {
+  from {
+    color: inherit;
+    text-shadow: none;
+  }
+  to {
+    color: rgb(211, 192, 27); /* Tomato color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+#underline-change.underline {
+  animation: underline 0.5s forwards;
+}
+
+
+
+
+
+
+
+
+
 @media (max-width: 800px) {
 
+  
+
+@keyframes underline {
+  from {
+    color: inherit;
+    text-shadow: none;
+  }
+  to {
+    /* color: rgb(232, 221, 7); Tomato color */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgb(189, 189, 20);
+    border-radius: 6px;
+    padding: 3px 3px;
+  }
+}
+
+#underline-change.underline {
+  animation: underline 0.5s forwards;
+}
 
   .home-button {
-    margin-top: 0.5rem;
-    /*lin grad for background color*/
-    background: linear-gradient(45deg, #000000e2 0%, #40404043 100%);
+
+    border-radius: 0.2rem;
+
   }
 
-  .homepage-content {
-
-    width: max-content;
-    top: 10rem;
-    left: 30%;
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .home-button {
-    padding-left: 1.5rem;
-    padding-right: 8rem;
-  }
 
 
   .H2class {
@@ -262,24 +290,44 @@ body {
   }
 
 
+  .home-button {
+    outline: 1px solid white;
+    box-shadow: 0 0.25rem 0.25rem #00000045;
+    margin-top: 0.5rem;
+    /*lin grad for background color*/
+    background: linear-gradient(135deg, #44444498 0%, #9f9e9eb8 100%); */
+    outline: 1.4px solid rgb(66, 66, 66);
+    padding: 0.5rem 2.5rem;
+    text-align: center;
+    border-radius: 20px;
+    margin-right: 0rem;
+  }
 
-
+  #ResumeLink{
+outline: 1px solid gold;
+  }
 
   .homepage-content {
-    text-align: right;
+
+    width: max-content;
+    top: 10rem;
+    margin: auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     position: absolute;
     align-items: normal;
-    justify-content: baseline;
+    justify-content: center;
     bottom: 15%;
-    left: auto;
-    right: 0rem;
-    width: max-content;
+    left: 0;
+    right: 0;
     z-index: 1000;
     
   
   }
   .home-button:hover{
-    background: none;
+    background: white;
   }
 
 
